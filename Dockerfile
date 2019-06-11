@@ -1,8 +1,8 @@
 FROM debian:stretch-slim
-ENV VERSION 0.2.2
+ENV VERSION 0.3.0
 WORKDIR /app
 RUN apt-get update && apt-get install -y curl openssl && \
-    curl -L -o pact-stub-server.gz https://github.com/uglyog/pact-stub-server/releases/download/v$VERSION/pact-stub-server-linux-x86_64-$VERSION.gz && \
+    curl -L -o pact-stub-server.gz https://github.com/ZescherW/pact-stub-server/releases/download/v$VERSION/pact-stub-server-linux-x86_64-$VERSION.gz && \
     gunzip pact-stub-server.gz && \
     chmod +x pact-stub-server && \
     apt-get purge -y curl && apt-get -y --purge autoremove && \
